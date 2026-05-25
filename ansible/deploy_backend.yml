@@ -1,0 +1,38 @@
+- name: Deploy Complaint System
+  hosts: app_servers
+
+  vars:
+    app_path: "/mnt/c/Users/Vaishnavi V/Desktop/sem6/sepm project/complaint-system/backend"
+
+  tasks:
+
+    - name: Check Node.js version
+      command: node -v
+      register: node_output
+      ignore_errors: yes
+
+    - name: Show Node.js version
+      debug:
+        msg: "{{ node_output.stdout }}"
+
+    - name: Install backend dependencies
+      shell: npm install
+      args:
+        chdir: "{{ app_path }}"
+
+    - name: Kill existing server (ignore if not running)
+      shell: pkill -f server.js
+      ignore_errors: yes
+
+    - name: Start backend server in background
+      shell: nohup node server.js > server.log 2>&1 &
+      args:
+        chdir: "{{ app_path }}"
+
+    - name: Wait for server to start
+      pause:
+        seconds: 3
+
+    - name: Show Vault Variables (secure usage demo)
+      debug:
+        msg: "DB User: {{ db_user }}, API Token: {{ api_token }}"

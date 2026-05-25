@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard-container">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+        <h2>Welcome</h2>
+        <p id="userEmail"></p>
+
+        <hr>
+
+        <p class="active" onclick="goToDashboard()">📌 Submit Complaint</p>
+        <p onclick="goToTrack()">📊 Track Status</p>
+
+        <button onclick="logout()">Logout</button>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+
+        <div class="card">
+            <h2>Submit Complaint</h2>
+
+            <input id="title" placeholder="Complaint Title">
+            <textarea id="desc" placeholder="Description"></textarea>
+
+            <button onclick="submitComplaint()">Submit</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="dashboard.js"></script>
+
+</body>
+</html>

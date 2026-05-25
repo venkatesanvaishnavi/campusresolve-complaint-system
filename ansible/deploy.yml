@@ -1,0 +1,25 @@
+- name: Run Backend Server
+  hosts: local
+  connection: local
+
+  vars_files:
+    - secrets.yml   # (optional - only if you created vault)
+
+  tasks:
+
+    - name: Install dependencies
+      command: npm install
+      args:
+        chdir: ../backend
+
+    - name: Kill old server if running
+      shell: pkill -f server.js
+      ignore_errors: yes
+
+    - name: Start server in background
+      shell: nohup node server.js > server.log 2>&1 &
+      args:
+        chdir: ../backend
+
+    - name: Show server status
+      shell: ps aux | grep node

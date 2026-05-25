@@ -1,0 +1,287 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #2f4f88, #1e3a8a);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-card {
+    background: white;
+    padding: 40px;
+    width: 350px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+.logo {
+    width: 80px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #2f4f88;
+    color: white;
+    border: none;
+    border-radius: 8px;
+}
+
+/* ===== DASHBOARD STYLES ===== */
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(135deg, #2f4f88, #1e3a8a);
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar p {
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.sidebar button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: white;
+    color: #1e3a8a;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* MAIN */
+.main-content {
+    flex: 1;
+    background: #f3f6fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.card input,
+.card textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.card button {
+    background: #2f4f88;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #1e3a8a;
+}
+
+/* ===== DASHBOARD LAYOUT ===== */
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(135deg, #2f4f88, #1e3a8a);
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-top: 0;
+}
+
+.sidebar p {
+    margin: 15px 0;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.sidebar p:hover {
+    color: #cbd5ff;
+}
+
+.active {
+    font-weight: bold;
+}
+
+/* LOGOUT BUTTON */
+.sidebar button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: white;
+    color: #1e3a8a;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* MAIN AREA */
+.main-content {
+    flex: 1;
+    background: #f3f6fb;
+    padding: 40px;
+}
+
+/* FULL WIDTH CARD */
+.card {
+    background: white;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+.card input,
+.card textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.card button {
+    background: #2f4f88;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.card button:hover {
+    background: #1e3a8a;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+/* LEFT SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: #0f172a;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar h2 {
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background: #2563eb;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* MAIN AREA */
+.main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+/* CARD */
+.card {
+    background: white;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.card button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.resolved {
+    color: green;
+    font-weight: bold;
+}
+
+select {
+    margin-top: 10px;
+    padding: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.card {
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}

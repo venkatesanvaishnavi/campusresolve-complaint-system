@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Complaint</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="layout">
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <h2>CCMS</h2>
+        <ul>
+            <li onclick="goDashboard()">🏠 Dashboard</li>
+            <li onclick="goSubmit()">📝 Submit Complaint</li>
+            <li onclick="goTrack()">📊 Track Complaint</li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main">
+        <h1>Submit Complaint</h1>
+
+        <div class="form-box">
+
+            <input type="text" id="title" placeholder="Complaint Title">
+
+            <textarea id="description" placeholder="Description"></textarea>
+
+            <select id="category">
+                <option>General</option>
+                <option>Facility</option>
+                <option>Hostel</option>
+                <option>Academic</option>
+            </select>
+
+            <button onclick="submitComplaint()">Submit</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+function goDashboard() {
+    window.location.href = "dashboard.html";
+}
+function goSubmit() {
+    window.location.href = "submit.html";
+}
+function goTrack() {
+    window.location.href = "track.html";
+}
+
+function submitComplaint() {
+    let title = document.getElementById("title").value;
+    let desc = document.getElementById("description").value;
+    let category = document.getElementById("category").value;
+
+    if(title === "" || desc === "") {
+        alert("Please fill all fields");
+        return;
+    }
+
+    let complaints = JSON.parse(localStorage.getItem("complaints")) || [];
+
+    let newComplaint = {
+        id: complaints.length + 1,
+        title: title,
+        description: desc,
+        category: category,
+        status: "Pending"
+    };
+
+    complaints.push(newComplaint);
+
+    localStorage.setItem("complaints", JSON.stringify(complaints));
+
+    alert("Complaint Submitted!");
+
+    window.location.href = "track.html";
+}
+</script>
+
+</body>
+</html>

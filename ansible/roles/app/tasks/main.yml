@@ -1,0 +1,7 @@
+- name: Show Database User
+  debug:
+    msg: "Database User: {{ db_user }}"
+
+- name: Show API Token
+  debug:
+    msg: "API Token: {{ api_token }}"
